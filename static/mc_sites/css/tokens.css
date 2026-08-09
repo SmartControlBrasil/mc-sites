@@ -1,0 +1,17 @@
+:root {
+    --mc-bg: #f7f7f4;
+    --mc-surface: #ffffff;
+    --mc-text: #171717;
+    --mc-muted: #62645f;
+    --mc-accent: #2364aa;
+    --mc-border: #deded8;
+    --mc-radius-sm: 4px;
+    --mc-radius-md: 8px;
+    --mc-radius-lg: 12px;
+    --mc-space-1: 0.25rem;
+    --mc-space-2: 0.5rem;
+    --mc-space-3: 1rem;
+    --mc-space-4: 1.5rem;
+    --mc-space-5: 2rem;
+    --mc-font-sans: Arial, Helvetica, sans-serif;
+}

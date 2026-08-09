@@ -1,0 +1,41 @@
+.mc-header,
+.mc-footer {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: var(--mc-space-4) var(--mc-space-3);
+}
+
+.mc-header__brand {
+    font-weight: 700;
+}
+
+.mc-page {
+    border-block: 1px solid var(--mc-border);
+}
+
+.mc-page__inner {
+    margin: 0 auto;
+    max-width: 1120px;
+    min-height: 60vh;
+    padding: var(--mc-space-5) var(--mc-space-3);
+}
+
+.mc-kicker,
+.mc-status {
+    color: var(--mc-muted);
+}
+
+.mc-page h1 {
+    font-size: 2.5rem;
+    margin: var(--mc-space-2) 0;
+}
+
+.mc-tagline {
+    color: var(--mc-accent);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.mc-footer {
+    color: var(--mc-muted);
+}
