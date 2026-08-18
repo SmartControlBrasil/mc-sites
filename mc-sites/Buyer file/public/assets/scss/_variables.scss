@@ -1,0 +1,37 @@
+// :root {
+// 	--p1: #ffff;
+// }
+
+// Theme Color - Default Colors
+
+//--== Use this color
+$body: #fff;
+$black: #02090F;
+$white: #fff;
+$black2: rgb(8, 8, 18);
+$ratting: #ffc000;
+$white: #fff;
+$p1-clr: #FD492E;
+$text-p1: #FD492E;
+$common-bgs: #F5F5F5;
+$p2-clr: rgb(255, 206, 90);
+$pra: #393C3E;
+$pra2: #ddd;
+$bg-color: rgb(238, 238, 245);
+$cmnbg: rgb(238, 238, 245);
+$border-color: rgb(0, 2, 41, 0.102);
+$shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+$transition-speed: 0.4s;
+$heading-font: "Phudu", sans-serif;
+
+//--==
+
+.text-p1{
+    color: $text-p1;
+}
+.text-theme{
+    color: $p1-clr !important; 
+}
+.cmn-bgs {
+    background: $common-bgs;
+}

@@ -1,0 +1,193 @@
+//sponsor-wrap
+.sponsor-wrap{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    .sponsor_item{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(57, 60, 62, 24%);
+        border-radius: 50%;
+        background-color: #02090F;
+        position: relative;
+        z-index: 1;
+        img{
+            max-width: 192px;
+            object-fit: contain;
+            height: 64px;
+        }
+        &::before{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            content: "";
+            background: url(../img/element/gradient-bg.png) no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            transform: scale(0);
+            transition: all 0.5s;
+        }
+        &:not(:first-child){
+            margin-left: -45px;
+        }
+        &:hover{
+            cursor: pointer;
+            &::before{
+                transform: scale(1);
+            }
+        }
+    }
+    @include breakpoint(max-xxxl){
+        .sponsor_item{
+            width: 250px;
+            height: 250px;  
+        }
+    }
+    @include breakpoint(max-xxl){
+        grid-template-columns: repeat(4, 1fr);
+        .sponsor_item{
+            width: 250px;
+            height: 250px;  
+            margin: 12px;
+            &:not(:first-child){
+                margin-left: -0px;
+            }
+        }
+    }
+    @include breakpoint(max-xl){
+        grid-template-columns: repeat(3, 1fr);
+        .sponsor_item{
+            width: 250px;
+            height: 250px;  
+            margin: 12px;
+            &:not(:first-child){
+                margin-left: -0px;
+            }
+        }
+    }
+    @include breakpoint(max-lg){
+        grid-template-columns: repeat(3, 1fr);
+        .sponsor_item{
+            width: 200px;
+            height: 200px;  
+            margin: 12px;
+            img{
+                max-width: 120px;
+            }
+            &:not(:first-child){
+                margin-left: -0px;
+            }
+        }
+    }
+    @include breakpoint(max-md){
+        grid-template-columns: repeat(3, 1fr);
+        .sponsor_item{
+            width: 150px;
+            height: 150px;  
+            margin: 12px;
+            img{
+                max-width: 100px;
+            }
+            &:not(:first-child){
+                margin-left: -0px;
+            }
+        }
+    }
+    @include breakpoint(max-sm){
+        grid-template-columns: repeat(2, 1fr);
+        .sponsor_item{
+            width: 150px;
+            height: 150px;  
+            img{
+                max-width: 100px;
+            }
+            &:not(:first-child){
+                margin-left: -0px;
+            }
+        }
+    }
+}
+
+//awards-section
+.awards-section{
+    position: relative;
+    z-index: 1;
+    .ele-drow{
+        position: absolute;
+        top: 180px;
+        left: 120px;
+        z-index: -1;
+    }
+}
+.award_this_wrapper{
+    .award-title{
+        color: #fff;
+        font-size: 200px;
+        height: 200px;
+        font-family: $heading-font;
+        font-weight: 700;
+        padding-left: 180px;
+    }
+    @include breakpoint(max-xxl){
+        .award-title{
+            font-size: 120px;
+            padding-left: 150px;
+            order: 2;
+        }
+    }
+}
+.award2-wrap{
+    min-width: 920px;
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    .award2-item{
+        max-width: 376px;
+        width: 100%;
+        padding: 40px 24px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(24px);
+        border-radius: 16px;
+        .badges{
+            position: relative;
+            background-color: #ffffff;
+            padding: 24px 12px 75px;
+            border-radius: 8px;
+            max-width: 110px;
+            margin: 0 auto 16px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 66%, 0 100%);
+
+            span{
+                font-size: 40px;
+                display: block;
+                font-weight: 700;
+                color: #02090F;
+                font-family: $heading-font;
+            }
+        }
+        &.active{
+            background-color: $p1-clr;
+            .badges{
+                background-color: rgb(255, 255, 255, 16%);
+                span{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-xxl){
+        min-width: auto;
+    }
+    @include breakpoint(max-sm){
+        flex-wrap: wrap;
+        gap: 24px;
+        .award2-item{
+            margin: 0 auto;
+        }
+    }
+}

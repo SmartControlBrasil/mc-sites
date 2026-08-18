@@ -1,0 +1,357 @@
+//Team style
+.team-main-section{
+    position: relative;    
+}
+.team-main-wrappper{
+    flex-wrap: wrap;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(5, 1fr);
+    @include breakpoint(max-xxl){
+        gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint(max-lg){
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(max-md){
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 500px) {
+        gap: 16px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.team-items{
+    transition: all 0.4s;
+    position: relative;
+    img{
+        width: 100%;
+        border-radius: 100px;
+    }
+    .content-box{
+        padding: 18px 18px;
+        background: rgba(2, 9, 15, 0.88);
+        backdrop-filter: blur(7.5px);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        transition: all 0.4s;
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(255, 255, 255, 70%);
+        }
+    }
+    &:hover{
+        .content-box{
+            left: 0;
+        }
+        transform: translateY(5px);
+    }
+}
+//Team style
+
+
+.team-slide__wrap{
+    margin-top: -380px;
+    .mySwiper2 {    
+        .my-team_big{
+            height: 514px;
+            border-radius: 10px;
+            .mimg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .team-cont{
+                position: absolute;
+                bottom: 90px;
+                right: -40px;
+                transform: rotate(-90deg);
+                opacity: 0;
+                transition: all 0.4s;
+                .badges{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #fff;
+                    background-color: $p1-clr;
+                    padding: 6px 16px;
+                    border-radius: 5px;
+                }
+                h3{
+                    a{
+                        color: #fff;
+                        font-size: 46px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-family: $heading-font;
+                    }
+                }
+            }
+            .social-white{
+                opacity: 0;
+                transition: all 0.4s;
+                a{
+                    background: rgba(255, 255, 255, 0.08);
+                    backdrop-filter: blur(24px);
+                    i{
+                        color: #fff;
+                    }
+                    &:hover{
+                        background-color: $p1-clr;
+                    }
+                }
+            }
+            &:hover{
+                .social-white{
+                    opacity: 1;
+                }
+                .team-cont{
+                    opacity: 1;
+                }
+            }
+            @include breakpoint(max-lg){
+                height: 450px;
+            }
+        }
+        .swiper-slide-active{
+            .my-team_big{
+                .social-white{
+                    opacity: 1 !important;
+                }
+                .team-cont{
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+    .mySwiper {
+        .swiper-slide{
+            // opacity: 0.4;
+        }
+        .swiper-slide-thumb-active{
+            opacity: 1 !important;
+        }
+        .my_team-item{
+            height: 270px;
+            border-radius: 10px;
+            overflow: hidden;
+            img{
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include breakpoint(max-lg){
+                height: 160px;
+            }
+        }
+    }
+    @media screen and (max-width: 1450px) {
+        .mySwiper2 {    
+            .my-team_big{
+                .team-cont{
+                    bottom: 90px;
+                    right: -40px;
+                    transform: rotate(-90deg);
+                    .badges{
+                        font-size: 14px;
+                        padding: 5px 12px;
+                    }
+                    h3{
+                        a{
+                            font-size: 38px;
+                            line-height: 38px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(max-xxl){
+        margin-top: -250px;
+    }
+    @include breakpoint(max-md){
+        margin-top: 30px;
+        .mySwiper2 {    
+            .my-team_big{
+                .team-cont{
+                    bottom: 90px;
+                    right: -0px;
+                    transform: rotate(-90deg);
+                    .badges{
+                        font-size: 14px;
+                        padding: 5px 12px;
+                    }
+                    h3{
+                        a{
+                            font-size: 24px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//founder-section
+.founder-section{
+    background: url(../img/thumbnail/founder-bg.png) no-repeat center center;
+    background-size: cover;
+    padding: 315px 10px;
+    background-attachment: fixed;
+    @include breakpoint(max-xl){
+        padding: 220px 10px;
+    }
+    @include breakpoint(max-lg){
+        padding: 150px 10px;
+    }
+}
+
+//team-section-03
+.team-section-03{
+    background-color: #F5F5F5;
+    position: relative;
+    z-index: 1;
+    .circle-ele{
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        z-index: -1;
+    }
+    @include breakpoint(max-xl){
+        .circle-ele{
+            top: 10px;
+            left: 10px;
+            width: 120px;
+        }
+    }
+}
+.team-wrapper-003{
+    display: flex;
+    gap: 32px;
+    .team-items{
+        position: relative;
+        &.t001{
+            top: -80px;
+        }
+        &.t005{
+            top: -80px;
+        }
+        &.t003{
+            top: 70px;
+        }
+    }
+    @include breakpoint(max-xxl){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        .team-items{
+            width: calc(90% / 3);
+            &.t001{
+                top: -0px;
+            }
+            &.t005{
+                top: -0px;
+            }
+            &.t003{
+                top: 0px;
+            }
+        }
+    }
+    @include breakpoint(max-md){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        .team-items{
+            width: calc(90% / 2);
+            &.t001{
+                top: -0px;
+            }
+            &.t005{
+                top: -0px;
+            }
+            &.t003{
+                top: 0px;
+            }
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .team-items{
+            width: calc(100%);
+        }
+    }
+}
+
+//showreel-section
+.showreel-section{
+    background-color: #02090F;
+    padding: 200px 0;
+    .showreel-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        font-size: 100px;
+        line-height: 108px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: $heading-font;
+        font-weight: 700;
+    }
+    @include breakpoint(max-xxl){
+        padding: 120px 0;
+        .showreel-content{
+            gap: 24px;
+            font-size: 100px;
+            line-height: 108px;
+        }
+    }
+    @include breakpoint(max-xl){
+        padding: 100px 0;
+        .showreel-content{
+            gap: 24px;
+            font-size: 70px;
+            line-height: 70px;
+            .starburst-mask{
+                max-width: 100px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-md){
+        padding: 100px 0;
+        .showreel-content{
+            gap: 16px;
+            font-size: 44px;
+            line-height: 44px;
+            .starburst-mask{
+                max-width: 74px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-sm){
+        padding: 100px 0;
+        .showreel-content{
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 44px;
+            line-height: 44px;
+        }
+    }
+}
+

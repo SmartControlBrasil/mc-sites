@@ -1,0 +1,285 @@
+//>>>>> Component Button Here <<<<<//
+
+//Btn Theme
+.common-btn {
+	position: relative;
+	padding: 19px 30px;
+	line-height: 18px;
+	transition: all 0.5s;
+	i {
+		transition: all 0.5s;
+		z-index: 1;
+	}
+	&:hover {
+		color: $black;
+	}
+	@include breakpoint(max-xxl) {
+		padding: 16px 24px;
+	}
+}
+
+.btn_approach{
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 24px;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: #fff;
+	transition: all 0.4s;
+	border-radius: 100px;
+	padding: 24px 40px;
+	font-weight: 600;
+	font-family: $heading-font;
+	background-color: rgb(255, 255, 255, 16%);
+	&:hover{
+		background-color: $p1-clr;
+		color: #fff;
+	}
+}
+
+.common_btn {
+	background-color: $text-p1;
+	color: $white;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px 8px 8px 24px;
+	border: none;
+	border-radius: 100px;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+	font-family: $heading-font;
+	.icon_wrapper {
+		background-color: $white;
+		color: $black;
+		width: 40px;
+		min-width: 40px;
+		height: 40px;
+		border-radius: 100px;
+		margin-left: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		i {
+			font-size: 16px;
+			transition: transform $transition-speed cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+	&.common_btn_outline {
+		border: 1px solid $text-p1;
+		background-color: transparent;
+		color: #000;
+		font-weight: 700;
+		transition: all 0.4s;
+		.icon_wrapper {
+			background-color: $text-p1;
+			i {
+				color: #fff;
+			}
+		}
+		&:hover {
+			border: 1px solid $text-p1;
+			background-color: $text-p1;
+			color: #fff;
+			font-weight: 700;
+			.icon_wrapper {
+				background-color: $white;
+				i {
+					color: #000;
+				}
+			}
+		}
+	}
+	&.common_btn-blacktheme{
+		background-color: #000;
+		color: #fff;
+		.icon_wrapper {
+			background-color: $p1-clr;
+			i{
+				color: #fff;
+			}
+		}
+	}
+	&.common_btn-whitetheme{
+		background-color: #fff;
+		color: #000;
+		.icon_wrapper {
+			background-color: $p1-clr;
+			i{
+				color: #fff;
+			}
+		}
+	}
+	&.common_btn-blurtheme{
+		background: rgba(255, 255, 255, 0.08);
+		backdrop-filter: blur(24px);
+		color: #fff;
+		.icon_wrapper {
+			background-color: $p1-clr;
+			i{
+				color: #fff;
+			}
+		}
+	}
+	&.common_btn__outline-white {
+		border: 1px solid #fff;
+		color: #fff;
+		.icon_wrapper {
+			background-color: #fff;
+			i {
+				color: #000;
+			}
+		}
+	}
+	&.common_btn__outline-theme3 {
+		border: 1px solid #6754e9;
+		background-color: transparent;
+		color: #000;
+		.icon_wrapper {
+			background-color: #6754e9;
+			i {
+				color: #fff;
+			}
+		}
+	}
+	// Hover State
+	&:hover {
+		.icon_wrapper i {
+			animation: arrowSlide $transition-speed forwards;
+		}
+	}
+	@include breakpoint(max-xxl) {
+		padding: 5px 5px 5px 12px;
+		font-size: 14px;
+		.icon_wrapper {
+			width: 32px;
+			min-width: 32px;
+			height: 32px;
+			margin-left: 6px;
+			i {
+				font-size: 12px;
+			}
+		}
+	}
+}
+.read-more-button {
+	font-size: 16px;
+	font-weight: 600;
+	color: $p1-clr;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	transition: all 0.3s ease;
+	i {
+		transition: all 0.3s ease;
+	}
+	&:hover {
+		color: $p1-clr;
+		i {
+			color: $p1-clr;
+			padding-left: 2px;
+		}
+	}
+	&.text-p1 {
+		color: $text-p1 !important;
+		&:hover {
+			color: $text-p1;
+			i {
+				color: $text-p1;
+			}
+		}
+	}
+}
+.read-more{
+	img{
+		transition: al 0.4s;
+	}
+	&:hover{
+		img{
+			margin-left: 4px;
+		}
+	}
+}
+
+// Animation Keyframes
+@keyframes arrowSlide {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	49% {
+		transform: translateX(35px);
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(-35px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+//Custom ANis
+@keyframes storm {
+	0% {
+		transform: translate3d(0, 0, 0) translateZ(0);
+	}
+	25% {
+		transform: translate3d(4px, 0, 0) translateZ(0);
+	}
+	50% {
+		transform: translate3d(-3px, 0, 0) translateZ(0);
+	}
+	75% {
+		transform: translate3d(2px, 0, 0) translateZ(0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0) translateZ(0);
+	}
+}
+.box-style {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	text-align: center;
+	&:hover {
+		&::before {
+			width: 400%;
+			height: 400%;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: var(--y);
+		left: var(--x);
+		transform: translate(-50%, -50%);
+		width: 0;
+		height: 0;
+		border-radius: 10px;
+		background-color: $p1-clr;
+		transition: all 0.7s ease;
+		z-index: -1;
+	}
+}
+.box-style.first-box {
+	&::before {
+		background-color: $p2-clr;
+	}
+	&:hover {
+		i {
+			color: $black;
+		}
+		span {
+			color: $black;
+		}
+	}
+}
+//>>>>> Component Button End <<<<<//
